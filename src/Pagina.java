@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class Pagina{
-	
+public class Pagina {
+
 	// Identificador unico de cada página
 	int id;
 
@@ -12,30 +12,31 @@ public class Pagina{
 	// Qtds de vezes que a pagina foi modificada
 	// Ativado sempre que página é escrita
 	int m;
-	
+
+	// Metodo para buscar o maior id da lista.
 	public int maiorId(ArrayList<Pagina> lista) {
 		int maiorId = 0;
 		for (Pagina pagina : lista) {
-			if(pagina.id > maiorId) {
+			if (pagina.id > maiorId) {
 				maiorId = pagina.id;
 			}
 		}
 		return maiorId;
 	}
-	
+
 	public Pagina(int id, int r, int m) {
 		super();
 		this.id = id;
 		this.r = r;
 		this.m = m;
 	}
-	
+
 	public Pagina() {
 	}
 
 	@Override
 	public String toString() {
-		return "Página com id=" + id + ", r=" + r + ", m=" + m+"\n";
+		return "Página com id=" + id + ", r=" + r + ", m=" + m;
 	}
 
 	@Override
